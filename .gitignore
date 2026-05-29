@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.vite/
+*.log
+.hub-preview.pid
+qa-hub-*.png
