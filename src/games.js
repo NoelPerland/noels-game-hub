@@ -34,7 +34,7 @@ export const games = [
     localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-27\\can-you-update-my-cv-and\\circuit-courier",
     repoName: "circuit-courier",
     github: "Needs GitHub repo",
-    deployUrl: "",
+    deployUrl: "https://gale-brood-circuitcourier.apps.liivo.io",
     thumbnail: "/assets/thumbs/circuit-courier.png",
     accent: "#00e5ff"
   },
@@ -48,7 +48,7 @@ export const games = [
     repoName: "aero-leap",
     github: "Needs GitHub repo",
     deployUrl: "https://narrow-nook-stuntmachine.apps.liivo.io",
-    thumbnail: "/assets/thumbs/aero-leap.png",
+    thumbnail: "/assets/thumbs/aero-leap-redesign.jpg",
     accent: "#ff6b6b"
   },
   {
@@ -73,7 +73,7 @@ export const games = [
     localPath: "C:\\Users\\LENOVO\\Desktop\\eyevinn\\bomber-man",
     repoName: "bomb-blitz-arena",
     github: "Needs GitHub repo",
-    deployUrl: "",
+    deployUrl: "https://rush-plum-bombblitzlive.apps.liivo.io",
     thumbnail: "/assets/thumbs/bomb-blitz-arena.png",
     accent: "#ff3d81"
   },
@@ -91,17 +91,17 @@ export const games = [
     accent: "#45ff9a"
   },
   {
-    slug: "boxline-siege",
-    title: "Boxline Siege",
-    description: "Canvas survival shooter with waves, pickups, weapons, and boss pressure.",
-    status: "prototype",
-    engine: "Canvas",
-    localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-19\\what-are-the-top-5-easiest",
-    repoName: "boxline-siege",
-    github: "Needs GitHub repo",
+    slug: "balloon-rush",
+    title: "Balloon Rush",
+    description: "Bloons-style tower defense with winding lanes, towers, upgrades, waves, and balloon pops.",
+    status: "playable",
+    engine: "Phaser",
+    localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-07\\we-have-created-many-game-what",
+    repoName: "balloon-rush",
+    github: "https://github.com/NoelPerland/balloon-rush",
     deployUrl: "",
-    thumbnail: "/assets/thumbs/boxline-siege.png",
-    accent: "#ffa24c"
+    thumbnail: "/assets/thumbs/balloon-rush.jpg",
+    accent: "#9cff3b"
   },
   {
     slug: "relic-grove-archive-frontier",
