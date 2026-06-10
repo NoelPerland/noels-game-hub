@@ -7,7 +7,7 @@ export const games = [
     engine: "Phaser",
     localPath: "C:\\eyevinn\\summer-platformer-ai",
     repoName: "sunset-shell-run",
-    github: "Needs GitHub repo",
+    github: "https://github.com/NoelPerland/sunset-shell-run",
     deployUrl: "https://pure-soil-summerplatformerai.apps.liivo.io",
     thumbnail: "/assets/thumbs/sunset-shell-run.png",
     accent: "#ffb347"
@@ -20,8 +20,8 @@ export const games = [
     engine: "Phaser",
     localPath: "C:\\Users\\LENOVO\\Desktop\\eyevinn\\age-of-war-lite",
     repoName: "age-of-war-lite",
-    github: "Needs GitHub repo",
-    deployUrl: "",
+    github: "https://github.com/NoelPerland/age-of-war-lite",
+    deployUrl: "https://flyby-copse-noelsgamehub.apps.liivo.io/games/age-of-war-lite/",
     thumbnail: "/assets/thumbs/age-of-war-lite.png",
     accent: "#ffd166"
   },
@@ -33,7 +33,7 @@ export const games = [
     engine: "Phaser",
     localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-27\\can-you-update-my-cv-and\\circuit-courier",
     repoName: "circuit-courier",
-    github: "Needs GitHub repo",
+    github: "https://github.com/NoelPerland/circuit-courier",
     deployUrl: "https://gale-brood-circuitcourier.apps.liivo.io",
     thumbnail: "/assets/thumbs/circuit-courier.png",
     accent: "#00e5ff"
@@ -46,7 +46,7 @@ export const games = [
     engine: "Phaser",
     localPath: "C:\\Users\\LENOVO\\Desktop\\eyevinn\\stunt-game",
     repoName: "aero-leap",
-    github: "Needs GitHub repo",
+    github: "https://github.com/NoelPerland/aero-leap",
     deployUrl: "https://narrow-nook-stuntmachine.apps.liivo.io",
     thumbnail: "/assets/thumbs/aero-leap-redesign.jpg",
     accent: "#ff6b6b"
@@ -72,7 +72,7 @@ export const games = [
     engine: "Phaser",
     localPath: "C:\\Users\\LENOVO\\Desktop\\eyevinn\\bomber-man",
     repoName: "bomb-blitz-arena",
-    github: "Needs GitHub repo",
+    github: "https://github.com/NoelPerland/bomb-blitz-arena",
     deployUrl: "https://rush-plum-bombblitzlive.apps.liivo.io",
     thumbnail: "/assets/thumbs/bomb-blitz-arena.png",
     accent: "#ff3d81"
@@ -99,7 +99,7 @@ export const games = [
     localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-07\\we-have-created-many-game-what",
     repoName: "balloon-rush",
     github: "https://github.com/NoelPerland/balloon-rush",
-    deployUrl: "",
+    deployUrl: "https://dust-teal-balloonrush.apps.liivo.io",
     thumbnail: "/assets/thumbs/balloon-rush.jpg",
     accent: "#9cff3b"
   },
@@ -111,8 +111,8 @@ export const games = [
     engine: "Canvas",
     localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-28\\caveman-c-users-lenovo-codex-skills",
     repoName: "relic-grove-archive-frontier",
-    github: "Needs GitHub repo",
-    deployUrl: "",
+    github: "https://github.com/NoelPerland/relic-grove-archive-frontier",
+    deployUrl: "https://flyby-copse-noelsgamehub.apps.liivo.io/games/relic-grove-archive-frontier/",
     thumbnail: "/assets/thumbs/relic-grove-archive-frontier.png",
     accent: "#b7ff5a"
   }
