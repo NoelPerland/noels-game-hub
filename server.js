@@ -19,11 +19,14 @@ const types = {
 http.createServer((req, res) => {
   const urlPath = decodeURIComponent(req.url.split("?")[0]);
   const target = urlPath === "/" ? "/index.html" : urlPath;
-  const file = path.normalize(path.join(root, target));
+  let file = path.normalize(path.join(root, target));
   if (!file.startsWith(root)) {
     res.writeHead(403);
     res.end("Forbidden");
     return;
+  }
+  if (fs.existsSync(file) && fs.statSync(file).isDirectory()) {
+    file = path.join(file, "index.html");
   }
   fs.readFile(file, (error, data) => {
     const fallback = path.join(root, "index.html");
