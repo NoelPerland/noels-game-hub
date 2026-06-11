@@ -92,7 +92,7 @@ export const games = [
   },
   {
     slug: "balloon-rush",
-    title: "Balloon Rush",
+    title: "Bloons Tower Defence",
     description: "Bloons-style tower defense with winding lanes, towers, upgrades, waves, and balloon pops.",
     status: "playable",
     engine: "Phaser",

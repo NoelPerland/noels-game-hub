@@ -27,7 +27,7 @@ function card(game, index) {
       ${
         canLaunch
           ? `<a class="play-button live" href="${game.deployUrl}" target="_blank" rel="noreferrer">Play now</a>`
-          : `<button class="play-button deploy" type="button" data-play="${game.slug}">View deploy notes</button>`
+          : `<button class="play-button deploy" type="button" data-play="${game.slug}">Play now</button>`
       }
       ${githubAction}
     </div>
@@ -82,7 +82,7 @@ app.innerHTML = `
         <div>
           <h2>Games</h2>
         </div>
-        <p>Pick a verified live game. Every Play button opens a running Liivo build.</p>
+        <p>Pick a verified live game. Every card says Play now.</p>
       </div>
       <div class="games-grid">
         ${games.map(card).join("")}
@@ -137,10 +137,7 @@ document.addEventListener("click", (event) => {
       <div><dt>Repo name</dt><dd>${game.repoName}</dd></div>
       <div><dt>GitHub</dt><dd>${game.github}</dd></div>
     </dl>
-    <p class="note">
-      Add a Liivo URL to <code>src/games.js</code> after this game is deployed, then this button
-      becomes a direct Play button.
-    </p>
+    <p class="note">This game needs a Liivo URL before it can launch from the hub.</p>
   `;
   dialog.showModal();
 });
