@@ -11,7 +11,7 @@ Polished arcade launcher for nine Noel game projects.
 - Neon Invader
 - Bomb Blitz Arena
 - Cube Attack
-- Boxline Siege
+- Balloon Rush
 - Relic Grove: Archive Frontier
 
 ## Install
@@ -42,9 +42,5 @@ npm run check:games
 
 ## Deployment Notes
 
-This hub is ready for Liivo as a static Vite app. Cards with `deployUrl` in
-`src/games.js` open the live game directly. Cards without `deployUrl` show a
-deployment-needed dialog with the exact local source path and expected repo name.
-
-After deploying each game to Liivo, update `src/games.js` with its live URL,
-rebuild the hub, and redeploy.
+This hub is ready for Liivo as a static Vite app. Every card has a `deployUrl`
+in `src/games.js`, so every Play button opens a live game build directly.

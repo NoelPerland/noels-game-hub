@@ -68,7 +68,7 @@ app.innerHTML = `
         <h1 id="page-title" data-text="NOEL'S GAME HUB">NOEL'S GAME HUB</h1>
         <p class="intro">
           A polished launch deck for Noel's browser games: quick to scan, easy to play,
-          and clear about what is ready to play on Liivo.
+          with every card wired to a live Liivo build.
         </p>
         <div class="hero-chips" aria-label="Hub stats">
           <span>9 game projects</span>
@@ -82,7 +82,7 @@ app.innerHTML = `
         <div>
           <h2>Games</h2>
         </div>
-        <p>Pick a verified live game. Projects without a good Liivo build show deploy notes.</p>
+        <p>Pick a verified live game. Every Play button opens a running Liivo build.</p>
       </div>
       <div class="games-grid">
         ${games.map(card).join("")}
