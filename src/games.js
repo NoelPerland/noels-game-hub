@@ -112,7 +112,7 @@ export const games = [
     localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-28\\caveman-c-users-lenovo-codex-skills",
     repoName: "relic-grove-archive-frontier",
     github: "https://github.com/NoelPerland/relic-grove-archive-frontier",
-    deployUrl: "https://flyby-copse-noelsgamehub.apps.liivo.io/games/relic-grove-archive-frontier/",
+    deployUrl: "/games/relic-grove-archive-frontier/",
     thumbnail: "/assets/thumbs/relic-grove-archive-frontier.png",
     accent: "#b7ff5a"
   }

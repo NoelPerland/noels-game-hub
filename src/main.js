@@ -67,8 +67,7 @@ app.innerHTML = `
       <div class="hero-content">
         <h1 id="page-title" data-text="NOEL'S GAME HUB">NOEL'S GAME HUB</h1>
         <p class="intro">
-          A polished launch deck for Noel's browser games: quick to scan, easy to play,
-          with every card wired to a live Liivo build.
+          A nostalgic game hub for the old school gamer and and developer both. Fully open soruce.
         </p>
         <div class="hero-chips" aria-label="Hub stats">
           <span>9 game projects</span>
@@ -82,7 +81,7 @@ app.innerHTML = `
         <div>
           <h2>Games</h2>
         </div>
-        <p>Pick a verified live game. Every card says Play now.</p>
+        <p>Pick a game, any game!</p>
       </div>
       <div class="games-grid">
         ${games.map(card).join("")}
