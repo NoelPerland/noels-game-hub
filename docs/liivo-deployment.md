@@ -6,8 +6,8 @@ Noel's Game Hub is a static Vite app.
 
 - Install: `npm install`
 - Build: `npm run build`
-- Static output: `dist`
-- Serve `dist` on Liivo.
+- Static output: committed `dist`
+- Start: `npm start`
 
 ## Launch Behavior
 
