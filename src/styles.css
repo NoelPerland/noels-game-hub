@@ -189,6 +189,11 @@ main {
   flex-wrap: wrap;
 }
 
+.hero-chips {
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-chips span,
 .status,
 .meta span {

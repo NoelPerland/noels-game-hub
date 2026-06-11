@@ -21,7 +21,7 @@ export const games = [
     localPath: "C:\\Users\\LENOVO\\Desktop\\eyevinn\\age-of-war-lite",
     repoName: "age-of-war-lite",
     github: "https://github.com/NoelPerland/age-of-war-lite",
-    deployUrl: "https://flyby-copse-noelsgamehub.apps.liivo.io/games/age-of-war-lite/",
+    deployUrl: "/games/age-of-war-lite/",
     thumbnail: "/assets/thumbs/age-of-war-lite.png",
     accent: "#ffd166"
   },
@@ -48,7 +48,7 @@ export const games = [
     repoName: "aero-leap",
     github: "https://github.com/NoelPerland/aero-leap",
     deployUrl: "https://narrow-nook-stuntmachine.apps.liivo.io",
-    thumbnail: "/assets/thumbs/aero-leap-redesign.jpg",
+    thumbnail: "/assets/thumbs/aero-leap-redesign.png",
     accent: "#ff6b6b"
   },
   {
