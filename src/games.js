@@ -117,12 +117,12 @@ export const games = [
     slug: "relic-grove-archive-frontier",
     title: "Relic Grove: Archive Frontier",
     description: "Top-down RPG slice with combat, gathering, inventory, upgrades, and boss clearing.",
-    status: "prototype",
+    status: "playable",
     engine: "Canvas",
     localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-28\\caveman-c-users-lenovo-codex-skills",
     repoName: "relic-grove-archive-frontier",
     github: "https://github.com/NoelPerland/relic-grove-archive-frontier",
-    deployUrl: "",
+    deployUrl: "https://noelperland.github.io/relic-grove-archive-frontier/",
     thumbnail: "/assets/thumbs/relic-grove-archive-frontier.png",
     accent: "#b7ff5a"
   }
