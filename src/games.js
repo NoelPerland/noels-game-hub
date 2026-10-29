@@ -77,15 +77,15 @@ export const games = [
   {
     slug: "bomb-blitz-arena",
     title: "Bomb Blitz Arena",
-    description: "Bomber arena with bots, tight loops, smoke-test hooks, and Phaser scene flow.",
+    description: "A colorful robot arena: outsmart three rivals with clever bomb traps and responsive thumb controls.",
     status: "playable",
     engine: "Phaser",
     localPath: "C:\\Users\\LENOVO\\Desktop\\eyevinn\\bomber-man",
     repoName: "bomb-blitz-arena",
     github: "https://github.com/NoelPerland/bomb-blitz-arena",
     deployUrl: "https://noelperland.github.io/bomb-blitz-arena/",
-    thumbnail: "/assets/thumbs/bomb-blitz-arena-web-polish.png",
-    accent: "#ff3d81"
+    thumbnail: "/assets/thumbs/bomb-blitz-garden-arcade.png",
+    accent: "#65b8b4"
   },
   {
     slug: "cube-attack",
