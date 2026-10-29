@@ -47,18 +47,18 @@ export const games = [
     slug: "salvage-squad",
     title: "Salvage Squad",
     description: "Steer an auto-firing robot squad through upgrade gates, escalating hazards, and a boss finale.",
-    status: "windows-build",
+    status: "playable",
     engine: "Unity",
     repoName: "SalvageSquad",
     github: "https://github.com/NoelPerland/SalvageSquad",
-    deployUrl: "",
+    deployUrl: "https://noelperland.github.io/SalvageSquad/",
     thumbnail: "/assets/thumbs/salvage-squad.png",
     gallery: [
       "/assets/showcase/salvage-gates.png",
       "/assets/thumbs/salvage-squad.png"
     ],
     highlights: ["Instant drag controls", "Visible squad growth", "Boss fights and short runs"],
-    availabilityNote: "A playable Windows build exists locally. Explore the public Unity source on GitHub; a packaged download is being prepared.",
+    availabilityNote: "Play the Unity WebGL build directly in your browser.",
     accent: "#e6b960"
   },
   {
@@ -127,3 +127,7 @@ export const games = [
     accent: "#b7ff5a"
   }
 ];
+
+const featuredOrder = ['hearthline-3d', 'salvage-squad', 'sunset-shell-run', 'relic-grove-archive-frontier', 'age-of-war-lite', 'bomb-blitz-arena', 'balloon-rush', 'cube-attack', 'neon-invader'];
+games.sort((a, b) => featuredOrder.indexOf(a.slug) - featuredOrder.indexOf(b.slug));
+
