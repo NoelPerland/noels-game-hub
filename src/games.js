@@ -26,30 +26,40 @@ export const games = [
     accent: "#ffd166"
   },
   {
-    slug: "circuit-courier",
-    title: "Circuit Courier",
-    description: "Neon courier runs with dashes, drones, mines, combos, and score chasing.",
+    slug: "hearthline-3d",
+    title: "Hearthline 3D",
+    description: "Build a frontier camp, automate its supply routes, defend it, and open the road to Stone Ridge.",
     status: "playable",
-    engine: "Phaser",
-    localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-27\\can-you-update-my-cv-and\\circuit-courier",
-    repoName: "circuit-courier",
-    github: "https://github.com/NoelPerland/circuit-courier",
-    deployUrl: "https://gale-brood-circuitcourier.apps.liivo.io",
-    thumbnail: "/assets/thumbs/circuit-courier.png",
-    accent: "#00e5ff"
+    engine: "Three.js",
+    repoName: "hearthline-3d",
+    github: "https://github.com/NoelPerland/hearthline-3d",
+    deployUrl: "https://noelperland.github.io/hearthline-3d/",
+    thumbnail: "/assets/thumbs/hearthline-3d.png",
+    gallery: [
+      "/assets/thumbs/hearthline-3d.png",
+      "/assets/showcase/hearthline-frontier.png"
+    ],
+    highlights: ["Persistent camp progression", "Workers and supply automation", "Combat and a second district"],
+    availabilityNote: "Play the browser build on GitHub Pages and explore its source on GitHub.",
+    accent: "#8cd8c9"
   },
   {
-    slug: "aero-leap",
-    title: "Stunt Machine / Aero Leap",
-    description: "Flash-style stunt launcher with physics, upgrades, distance scoring, and crashes.",
-    status: "playable",
-    engine: "Phaser",
-    localPath: "C:\\Users\\LENOVO\\Desktop\\eyevinn\\stunt-game",
-    repoName: "aero-leap",
-    github: "https://github.com/NoelPerland/aero-leap",
-    deployUrl: "https://narrow-nook-stuntmachine.apps.liivo.io",
-    thumbnail: "/assets/thumbs/aero-leap-redesign.png",
-    accent: "#ff6b6b"
+    slug: "salvage-squad",
+    title: "Salvage Squad",
+    description: "Steer an auto-firing robot squad through upgrade gates, escalating hazards, and a boss finale.",
+    status: "windows-build",
+    engine: "Unity",
+    repoName: "SalvageSquad",
+    github: "https://github.com/NoelPerland/SalvageSquad",
+    deployUrl: "",
+    thumbnail: "/assets/thumbs/salvage-squad.png",
+    gallery: [
+      "/assets/showcase/salvage-gates.png",
+      "/assets/thumbs/salvage-squad.png"
+    ],
+    highlights: ["Instant drag controls", "Visible squad growth", "Boss fights and short runs"],
+    availabilityNote: "A playable Windows build exists locally. Explore the public Unity source on GitHub; a packaged download is being prepared.",
+    accent: "#e6b960"
   },
   {
     slug: "neon-invader",
