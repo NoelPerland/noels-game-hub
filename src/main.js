@@ -3,6 +3,7 @@ import { games } from "./games.js";
 
 const app = document.querySelector("#app");
 const liveCount = games.filter((game) => game.deployUrl).length;
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
 
 function statusLabel(game) {
   if (game.deployUrl) return game.deployUrl.includes("github.io") ? "Play on GitHub Pages" : "Live on Liivo";
@@ -37,7 +38,7 @@ function card(game, index) {
   return `
     <article class="game-card ${canLaunch ? "is-live" : "needs-deploy"}" style="--i: ${index}; --accent: ${game.accent}" data-slug="${game.slug}">
       <div class="card-media">
-        <img src="${game.thumbnail}" alt="${game.title} gameplay thumbnail" loading="lazy" />
+        <img src="${assetUrl(game.thumbnail)}" alt="${game.title} gameplay thumbnail" loading="lazy" />
         <span class="status ${statusClass(game)}">${statusLabel(game)}</span>
       </div>
       <div class="card-body">
@@ -129,7 +130,7 @@ document.addEventListener("click", (event) => {
   }
 
   dialogMedia.innerHTML = (game.gallery ?? [game.thumbnail])
-    .map((image, index) => `<img src="${image}" alt="${game.title} gameplay view ${index + 1}" loading="lazy" />`)
+    .map((image, index) => `<img src="${assetUrl(image)}" alt="${game.title} gameplay view ${index + 1}" loading="lazy" />`)
     .join("");
   dialogCopy.innerHTML = `
     <p class="eyebrow">${statusLabel(game)} · ${game.engine}</p>

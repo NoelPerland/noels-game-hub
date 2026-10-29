@@ -21,7 +21,7 @@ export const games = [
     localPath: "C:\\Users\\LENOVO\\Desktop\\eyevinn\\age-of-war-lite",
     repoName: "age-of-war-lite",
     github: "https://github.com/NoelPerland/age-of-war-lite",
-    deployUrl: "/games/age-of-war-lite/",
+    deployUrl: "https://noelperland.github.io/age-of-war-lite/",
     thumbnail: "/assets/thumbs/age-of-war-lite.png",
     accent: "#ffd166"
   },
@@ -83,7 +83,7 @@ export const games = [
     localPath: "C:\\Users\\LENOVO\\Desktop\\eyevinn\\bomber-man",
     repoName: "bomb-blitz-arena",
     github: "https://github.com/NoelPerland/bomb-blitz-arena",
-    deployUrl: "https://rush-plum-bombblitzlive.apps.liivo.io",
+    deployUrl: "https://noelperland.github.io/bomb-blitz-arena/",
     thumbnail: "/assets/thumbs/bomb-blitz-arena.png",
     accent: "#ff3d81"
   },
@@ -122,7 +122,7 @@ export const games = [
     localPath: "C:\\Users\\LENOVO\\Documents\\Codex\\2026-05-28\\caveman-c-users-lenovo-codex-skills",
     repoName: "relic-grove-archive-frontier",
     github: "https://github.com/NoelPerland/relic-grove-archive-frontier",
-    deployUrl: "/games/relic-grove-archive-frontier/",
+    deployUrl: "",
     thumbnail: "/assets/thumbs/relic-grove-archive-frontier.png",
     accent: "#b7ff5a"
   }
