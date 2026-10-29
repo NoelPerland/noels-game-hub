@@ -5,29 +5,31 @@ const app = document.querySelector("#app");
 const liveCount = games.filter((game) => game.deployUrl).length;
 
 function statusLabel(game) {
-  if (game.deployUrl) return "Live on Liivo";
+  if (game.deployUrl) return game.deployUrl.includes("github.io") ? "Play on GitHub Pages" : "Live on Liivo";
+  if (game.status === "windows-build") return "Windows build";
+  if (game.status === "browser-preview") return "Browser preview";
   if (game.status === "playable") return "Playable locally";
   return "Prototype";
 }
 
 function statusClass(game) {
   if (game.deployUrl) return "live";
-  if (game.status === "playable") return "local";
+  if (["playable", "windows-build", "browser-preview"].includes(game.status)) return "local";
   return "prototype";
 }
 
 function card(game, index) {
   const canLaunch = Boolean(game.deployUrl);
-  const hasGithub = game.github.startsWith("http");
+  const hasGithub = game.github.startsWith("http") && game.githubAccess !== "private";
   const githubAction = hasGithub
     ? `<a class="github-action" href="${game.github}" target="_blank" rel="noreferrer" aria-label="${game.title} GitHub project">${githubIcon()}</a>`
-    : `<button class="github-action unavailable" type="button" data-play="${game.slug}" aria-label="${game.title} GitHub repo needed">${githubIcon()}</button>`;
+    : "";
   const action = `
-    <div class="card-actions">
+    <div class="card-actions ${hasGithub ? "" : "single-action"}">
       ${
         canLaunch
           ? `<a class="play-button live" href="${game.deployUrl}" target="_blank" rel="noreferrer">Play now</a>`
-          : `<button class="play-button deploy" type="button" data-play="${game.slug}">Play now</button>`
+          : `<button class="play-button deploy" type="button" data-play="${game.slug}">Explore project</button>`
       }
       ${githubAction}
     </div>
@@ -46,7 +48,7 @@ function card(game, index) {
         <p>${game.description}</p>
         <div class="meta">
           <span>${game.repoName}</span>
-          <span>${game.github.startsWith("http") ? "GitHub ready" : "Repo needed"}</span>
+          <span>${game.githubAccess === "private" ? "Private GitHub source" : hasGithub ? "GitHub source" : "Source release pending"}</span>
         </div>
         ${action}
       </div>
@@ -67,12 +69,12 @@ app.innerHTML = `
       <div class="hero-content">
         <h1 id="page-title" data-text="NOEL'S GAME HUB">NOEL'S GAME HUB</h1>
         <p class="intro">
-          A nostalgic game hub for the old school gamer and and developer both. Fully open soruce.
+          Original browser games and playable projects, from fast arcade runs to deeper strategy and survival.
         </p>
         <div class="hero-chips" aria-label="Hub stats">
-          <span>9 game projects</span>
-          <span>${liveCount} verified live links</span>
-          <span>Desktop + mobile ready</span>
+          <span>${games.length} game projects</span>
+          <span>${liveCount} browser play links</span>
+          <span>Browser + Windows projects</span>
         </div>
       </div>
     </section>
@@ -81,7 +83,7 @@ app.innerHTML = `
         <div>
           <h2>Games</h2>
         </div>
-        <p>Pick a game, any game!</p>
+        <p>Play a live build or explore a project.</p>
       </div>
       <div class="games-grid">
         ${games.map(card).join("")}
@@ -90,7 +92,7 @@ app.innerHTML = `
     <footer class="site-footer" aria-label="Footer">
       <div class="footer-brand">
         <span>Noel's Game Hub</span>
-        <p>Y2K arcade launcher for browser games, experiments, and playable builds.</p>
+        <p>Arcade games, strategy projects, and playable builds.</p>
       </div>
       <nav class="footer-links" aria-label="Footer links">
         <a href="#page-title">About me</a>
@@ -126,20 +128,23 @@ document.addEventListener("click", (event) => {
     return;
   }
 
-  dialogMedia.style.backgroundImage = `url("${game.thumbnail}")`;
+  dialogMedia.innerHTML = (game.gallery ?? [game.thumbnail])
+    .map((image, index) => `<img src="${image}" alt="${game.title} gameplay view ${index + 1}" loading="lazy" />`)
+    .join("");
   dialogCopy.innerHTML = `
-    <p class="eyebrow">Deployment needed</p>
+    <p class="eyebrow">${statusLabel(game)} · ${game.engine}</p>
     <h2>${game.title}</h2>
     <p>${game.description}</p>
-    <dl>
-      <div><dt>Local path</dt><dd>${game.localPath}</dd></div>
-      <div><dt>Repo name</dt><dd>${game.repoName}</dd></div>
-      <div><dt>GitHub</dt><dd>${game.github}</dd></div>
-    </dl>
-    <p class="note">This game needs a Liivo URL before it can launch from the hub.</p>
+    ${game.highlights ? `<ul class="showcase-highlights">${game.highlights.map((highlight) => `<li>${highlight}</li>`).join("")}</ul>` : ""}
+    <p class="note">${game.availabilityNote ?? "A public play link is being prepared."}</p>
+    ${hasPublicSource(game) ? `<a class="showcase-source" href="${game.github}" target="_blank" rel="noreferrer">View source on GitHub</a>` : ""}
   `;
   dialog.showModal();
 });
+
+function hasPublicSource(game) {
+  return game.github.startsWith("http") && game.githubAccess !== "private";
+}
 
 dialog.querySelector(".close-dialog").addEventListener("click", () => dialog.close());
 dialog.addEventListener("click", (event) => {

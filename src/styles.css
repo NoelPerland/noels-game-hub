@@ -447,6 +447,14 @@ h1::before {
   filter: saturate(0.98) contrast(1.04) brightness(0.98);
 }
 
+.game-card[data-slug="hearthline-3d"] .card-media img {
+  object-position: center 43%;
+}
+
+.game-card[data-slug="salvage-squad"] .card-media img {
+  object-position: center 38%;
+}
+
 .card-media::after {
   content: "";
   position: absolute;
@@ -535,6 +543,10 @@ h1::before {
   gap: 10px;
 }
 
+.card-actions.single-action {
+  grid-template-columns: 1fr;
+}
+
 .play-button,
 .github-action {
   min-height: 48px;
@@ -621,10 +633,11 @@ h1::before {
 
 dialog {
   width: min(760px, calc(100% - 28px));
+  max-height: min(90vh, 900px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 0;
-  overflow: hidden;
+  overflow-y: auto;
   background: #0a0f1d;
   color: var(--text);
   box-shadow: var(--shadow);
@@ -636,9 +649,19 @@ dialog::backdrop {
 }
 
 .dialog-media {
-  aspect-ratio: 16 / 7;
-  background-size: cover;
-  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px;
+  background: #101a2b;
+}
+
+.dialog-media img {
+  width: 100%;
+  height: clamp(230px, 44vh, 380px);
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: 6px;
 }
 
 .dialog-copy {
@@ -652,6 +675,32 @@ dialog::backdrop {
 .dialog-copy p {
   color: #c5d4df;
   line-height: 1.6;
+}
+
+.showcase-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.showcase-highlights li {
+  padding: 8px 11px;
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  border-radius: 999px;
+  color: #e8faff;
+  background: rgba(0, 245, 255, 0.08);
+  font-size: 0.83rem;
+  font-weight: 750;
+}
+
+.showcase-source {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--primary);
+  font-weight: 800;
 }
 
 dl {
