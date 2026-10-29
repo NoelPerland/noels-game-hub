@@ -8,8 +8,8 @@ export const games = [
     localPath: "C:\\eyevinn\\summer-platformer-ai",
     repoName: "sunset-shell-run",
     github: "https://github.com/NoelPerland/sunset-shell-run",
-    deployUrl: "https://pure-soil-summerplatformerai.apps.liivo.io",
-    thumbnail: "/assets/thumbs/sunset-shell-run.png",
+    deployUrl: "https://noelperland.github.io/sunset-shell-run/",
+    thumbnail: "/assets/thumbs/sunset-shell-run-web-polish.png",
     accent: "#ffb347"
   },
   {
@@ -22,7 +22,7 @@ export const games = [
     repoName: "age-of-war-lite",
     github: "https://github.com/NoelPerland/age-of-war-lite",
     deployUrl: "https://noelperland.github.io/age-of-war-lite/",
-    thumbnail: "/assets/thumbs/age-of-war-lite.png",
+    thumbnail: "/assets/thumbs/age-of-war-lite-web-polish.png",
     accent: "#ffd166"
   },
   {
@@ -34,9 +34,9 @@ export const games = [
     repoName: "hearthline-3d",
     github: "https://github.com/NoelPerland/hearthline-3d",
     deployUrl: "https://noelperland.github.io/hearthline-3d/",
-    thumbnail: "/assets/thumbs/hearthline-3d.png",
+    thumbnail: "/assets/thumbs/hearthline-3d-web-polish.png",
     gallery: [
-      "/assets/thumbs/hearthline-3d.png",
+      "/assets/thumbs/hearthline-3d-web-polish.png",
       "/assets/showcase/hearthline-frontier.png"
     ],
     highlights: ["Persistent camp progression", "Workers and supply automation", "Combat and a second district"],
@@ -52,10 +52,10 @@ export const games = [
     repoName: "SalvageSquad",
     github: "https://github.com/NoelPerland/SalvageSquad",
     deployUrl: "https://noelperland.github.io/SalvageSquad/",
-    thumbnail: "/assets/thumbs/salvage-squad.png",
+    thumbnail: "/assets/thumbs/salvage-squad-web-polish.png",
     gallery: [
       "/assets/showcase/salvage-gates.png",
-      "/assets/thumbs/salvage-squad.png"
+      "/assets/thumbs/salvage-squad-web-polish.png"
     ],
     highlights: ["Instant drag controls", "Visible squad growth", "Boss fights and short runs"],
     availabilityNote: "Play the Unity WebGL build directly in your browser.",
@@ -84,7 +84,7 @@ export const games = [
     repoName: "bomb-blitz-arena",
     github: "https://github.com/NoelPerland/bomb-blitz-arena",
     deployUrl: "https://noelperland.github.io/bomb-blitz-arena/",
-    thumbnail: "/assets/thumbs/bomb-blitz-arena.png",
+    thumbnail: "/assets/thumbs/bomb-blitz-arena-web-polish.png",
     accent: "#ff3d81"
   },
   {
@@ -130,4 +130,5 @@ export const games = [
 
 const featuredOrder = ['hearthline-3d', 'salvage-squad', 'sunset-shell-run', 'relic-grove-archive-frontier', 'age-of-war-lite', 'bomb-blitz-arena', 'balloon-rush', 'cube-attack', 'neon-invader'];
 games.sort((a, b) => featuredOrder.indexOf(a.slug) - featuredOrder.indexOf(b.slug));
+
 
