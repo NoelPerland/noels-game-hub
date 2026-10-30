@@ -17,3 +17,21 @@ These are observed checks, not a claim that all games are bug-free. Desktop Chro
 Regression commands live in the individual repositories. Set CHROME_PATH when a test uses Chrome at a different location. Use Node24. Tests must run against the public subfolder after deployment too; local success cannot detect a wrong asset base.
 
 Before claiming a future change complete, inspect actual gameplay and its relevant outcome screens, not just HTTP200 or canvas presence. Preserve saves and balance. Update this document when coverage changes.
+
+## Additional local checks — not yet public-release verification
+
+The following checks ran against local source during continued maintenance. They do not update the public-release claims above.
+
+| Project | New observed local coverage | Limit |
+|---|---|---|
+| Hearthline | Blocked-storage startup, accurate save warning, deterministic progression checks | Natural full progression/physical phone not verified |
+| Sunset | Blocked/full-storage completion, next-level, pause/restart; saved-index validation | Controlled completion; all levels not naturally completed |
+| Relic | Focus/pointer cleanup; blocked/full-storage startup, movement, pause freeze, level-up/boss clear, restart | Controlled progression, not full natural RPG run |
+| Age | Read/write storage failures, result/restart | Controlled victory; art-role reuse unchanged |
+| Bomb | Controlled victory/defeat, rematch, title/reentry | Full natural rounds not covered |
+| Balloon | Queued auto-wave cancellation; touch purchase/upgrade lock/wave start at five sizes | Full20wave natural win not covered |
+| Cube | Customization, death/results, return, keyboard/pointer jump, mute/reload persistence | Full-level natural win not covered |
+| Neon | Two-finger move/fire; five assisted wave transitions, victory/retry/defeat | Outcome wiring, not unassisted five-wave completion |
+| Hub | Nine loaded cards/images, play links, keyboard skip/focus, desktop/phone/rotation | Emulated viewports; external gameplay is tested separately |
+
+Source fixes preserve save keys and progression. Run each repository's documented regression commands after cloning; report local and public evidence separately. Human steering comprehension, listening assessments, physical devices and campaign balance remain separate validation tasks.

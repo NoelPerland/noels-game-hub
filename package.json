@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
     "start": "node server.js",
-    "check:games": "node scripts/check-games.mjs"
+    "check:games": "node scripts/check-games.mjs",
+    "check:server": "node scripts/check-server.mjs"
   },
   "devDependencies": {
     "vite": "^8.0.14"

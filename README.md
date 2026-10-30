@@ -46,7 +46,7 @@ The authoritative live URLs and ordering are in `src/games.js`. Stunt Machine an
 ```sh
 npm run check:games
 npm run build -- --base=/noels-game-hub/
-npm run preview
+npm run preview -- --base=/noels-game-hub/
 ```
 
 Use the corresponding Vite base for another deployment root. Never use root-relative runtime asset URLs for a GitHub Pages subfolder.
@@ -66,3 +66,7 @@ All nine cards now target GitHub Pages deployments. Age of War's public repair p
 Generated dist files belong to the gh-pages release branch, not main. Run the documented build after cloning source.
 
 Phone emulation is not physical-device testing. No claim is made that every level, browser, device or campaign has been tested.
+
+## Local maintenance checks
+
+Run npm run check:server after building to verify malformed URL handling, path boundaries, and normal static responses. The hub includes a keyboard skip link and visible link focus; About me opens the maintained portfolio.

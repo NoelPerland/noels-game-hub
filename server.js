@@ -17,10 +17,18 @@ const types = {
 };
 
 http.createServer((req, res) => {
-  const urlPath = decodeURIComponent(req.url.split("?")[0]);
+  let urlPath;
+  try {
+    urlPath = decodeURIComponent(req.url.split("?")[0]);
+    if (urlPath.includes("\0")) throw new URIError("Null byte in URL");
+  } catch {
+    res.writeHead(400);
+    res.end("Bad request");
+    return;
+  }
   const target = urlPath === "/" ? "/index.html" : urlPath;
   let file = path.normalize(path.join(root, target));
-  if (!file.startsWith(root)) {
+  if (file !== root && !file.startsWith(root + path.sep)) {
     res.writeHead(403);
     res.end("Forbidden");
     return;
