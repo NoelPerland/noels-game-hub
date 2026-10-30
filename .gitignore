@@ -3,3 +3,4 @@ node_modules/
 *.log
 .hub-preview.pid
 qa-hub-*.png
+dist/

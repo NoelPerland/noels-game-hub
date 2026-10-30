@@ -61,6 +61,8 @@ The old Liivo hub is independently hosted; GitHub pushes do not update it.
 
 ## Verification status and limits — 30 October 2026
 
-Age of War's published repair passed checks for 36 complete poses, six centered labels, attacks/recovery, combat deaths, results/restart and five viewport sizes. Hearthline, Salvage, Sunset, Relic and Bomb have browser checks; additional mobile/resizing work is ongoing. Older games start and play on desktop. Phone issues found in Neon, Balloon and Cube are being repaired separately. Read each game's latest README and commits before claiming those repairs are published.
+All nine cards now target GitHub Pages deployments. Age of War's public repair passed 36-pose, six-label, combat, result/restart and viewport checks. Sunset, Neon, Balloon and Cube received additional responsive/input repairs and their own source commits and public builds. See [verification coverage](docs/VERIFICATION.md) for the exact checks and limits; this is not a claim that every campaign or device is covered.
+
+Generated dist files belong to the gh-pages release branch, not main. Run the documented build after cloning source.
 
 Phone emulation is not physical-device testing. No claim is made that every level, browser, device or campaign has been tested.

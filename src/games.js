@@ -67,7 +67,7 @@ export const games = [
     engine: "Phaser",
     repoName: "neon-invader",
     github: "https://github.com/NoelPerland/neon-invader",
-    deployUrl: "https://dark-grove-neoninvader.apps.liivo.io",
+    deployUrl: "https://noelperland.github.io/neon-invader/",
     thumbnail: "/assets/thumbs/neon-invader.png",
     accent: "#7c5cff"
   },
@@ -91,19 +91,19 @@ export const games = [
     engine: "Phaser",
     repoName: "cube-attack",
     github: "https://github.com/NoelPerland/cube-attack",
-    deployUrl: "https://cubeattack.apps.liivo.io",
+    deployUrl: "https://noelperland.github.io/cube-attack/",
     thumbnail: "/assets/thumbs/cube-attack.png",
     accent: "#45ff9a"
   },
   {
     slug: "balloon-rush",
-    title: "Bloons Tower Defence",
+    title: "Balloon Rush",
     description: "Bloons-style tower defense with winding lanes, towers, upgrades, waves, and balloon pops.",
     status: "playable",
     engine: "Phaser",
     repoName: "balloon-rush",
     github: "https://github.com/NoelPerland/balloon-rush",
-    deployUrl: "https://dust-teal-balloonrush.apps.liivo.io",
+    deployUrl: "https://noelperland.github.io/balloon-rush/",
     thumbnail: "/assets/thumbs/balloon-rush.jpg",
     accent: "#9cff3b"
   },
