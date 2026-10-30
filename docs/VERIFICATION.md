@@ -35,3 +35,9 @@ The following checks ran against local source during continued maintenance. They
 | Hub | Nine loaded cards/images, play links, keyboard skip/focus, desktop/phone/rotation | Emulated viewports; external gameplay is tested separately |
 
 Source fixes preserve save keys and progression. Run each repository's documented regression commands after cloning; report local and public evidence separately. Human steering comprehension, listening assessments, physical devices and campaign balance remain separate validation tasks.
+
+## README-priority release pass
+
+Changes published through existing source branches and existing Pages/Vercel projects. Public hub passed five viewport sizes, nine cards/images/play links, keyboard skip and no runtime errors. Public Age battle regression passed poses/labels/combat/results/restart. Public Relic, Sunset, Bomb and Hearthline phone launch/input checks found no missing same-origin assets or runtime errors. These launch checks do not establish campaign completion.
+
+New portable repository checks: Cube verify:completion passed the full level using real keyboard jumps and read-only authored guide positions, then verified completed save after reload. Guide timing metadata was corrected without changing physics or obstacles. Neon verify:progression passed simultaneous real touch input, five assisted waves, visible victory/defeat and Enter/Space retries. Sunset verify:mechanics checks all four themes and core mechanics with controlled scene state. Relic test:visual checks gate source landmarks and hero bounds/directions; cropped gate spires/pillars repaired with existing art. Natural full Neon/Balloon campaigns, physical devices, human Salvage steering/audio and account/email lifecycle remain unverified.
