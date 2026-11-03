@@ -2,7 +2,6 @@ import "./styles.css";
 import { games } from "./games.js";
 
 const app = document.querySelector("#app");
-const liveCount = games.filter((game) => game.deployUrl).length;
 const assetUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
 
 function statusLabel(game) {
@@ -71,13 +70,9 @@ app.innerHTML = `
       <div class="hero-content">
         <h1 id="page-title" data-text="NOEL'S GAME HUB">NOEL'S GAME HUB</h1>
         <p class="intro">
-          Original browser games and playable projects, from fast arcade runs to deeper strategy and survival.
+          Nine original browser games, from fast arcade runs to deeper strategy and survival.
         </p>
-        <div class="hero-chips" aria-label="Hub stats">
-          <span>${games.length} game projects</span>
-          <span>${liveCount} browser play links</span>
-          <span>Free browser games</span>
-        </div>
+        <a class="hero-explore" href="#games">Browse the games <span aria-hidden="true">↓</span></a>
       </div>
     </section>
     <section id="games" tabindex="-1" class="grid-wrap" aria-label="Game launcher grid">
@@ -85,7 +80,6 @@ app.innerHTML = `
         <div>
           <h2>Games</h2>
         </div>
-        <p>Play a live build or explore a project.</p>
       </div>
       <div class="games-grid">
         ${games.map(card).join("")}
@@ -97,7 +91,7 @@ app.innerHTML = `
         <p>Arcade games, strategy projects, and playable builds.</p>
       </div>
       <nav class="footer-links" aria-label="Footer links">
-        <a href="https://portfolio-eta-amber-97.vercel.app/">About me</a>
+        <a href="https://noelperland.vercel.app/">About me</a>
         <a href="mailto:noel.perland@gmail.com">Contact</a>
         <a class="icon-link" href="https://github.com/NoelPerland" target="_blank" rel="noreferrer" aria-label="GitHub">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5v-1.78c-2.78.62-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 5.92c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.95.68 1.92v2.84c0 .28.18.6.69.5A10.07 10.07 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>

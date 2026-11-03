@@ -31,7 +31,7 @@ Open the URL printed by Vite. The hub needs no secrets or environment variables.
 | Cube Attack | [cube-attack](https://github.com/NoelPerland/cube-attack) |
 | Neon Invader | [neon-invader](https://github.com/NoelPerland/neon-invader) |
 
-The authoritative live URLs and ordering are in `src/games.js`. Stunt Machine and Circuit Courier are retired from this hub. The portfolio has its own [repository](https://github.com/NoelPerland/portfolio) and [public site](https://portfolio-eta-amber-97.vercel.app/).
+The authoritative live URLs and ordering are in `src/games.js`. Stunt Machine and Circuit Courier are retired from this hub. The portfolio has its own [repository](https://github.com/NoelPerland/portfolio) and [public site](https://noelperland.vercel.app/).
 
 ## Files to edit
 
