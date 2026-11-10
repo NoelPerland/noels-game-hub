@@ -64,11 +64,9 @@ app.innerHTML = `
   <a class="skip-link" href="#games">Skip to games</a>
   <main>
     <section class="hero" aria-labelledby="page-title">
-      <div class="hero-bg" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-content">
-        <h1 id="page-title" data-text="NOEL'S GAME HUB">NOEL'S GAME HUB</h1>
+        <h1 id="page-title">NOEL'S GAME HUB</h1>
         <p class="intro">
           Nine original browser games, from fast arcade runs to deeper strategy and survival.
         </p>
