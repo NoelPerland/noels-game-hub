@@ -63,7 +63,11 @@ app.innerHTML = `
   <a class="skip-link" href="#games">Skip to games</a>
   <main>
     <section class="hero" aria-labelledby="page-title">
-      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-bg" aria-hidden="true">
+        <img src="${assetUrl('assets/thumbs/hearthline-3d.png')}" alt="" />
+        <img src="${assetUrl('assets/thumbs/neon-invader.png')}" alt="" />
+        <img src="${assetUrl('assets/thumbs/relic-grove-archive-frontier.png')}" alt="" />
+      </div>
       <div class="hero-content">
         <h1 id="page-title">NOEL'S GAME HUB</h1>
         <p class="intro">
