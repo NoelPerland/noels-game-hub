@@ -24,6 +24,9 @@ function card(game, index) {
   const githubAction = hasGithub
     ? `<a class="github-action" href="${game.github}" target="_blank" rel="noreferrer" aria-label="${game.title} GitHub project">${githubIcon()}</a>`
     : "";
+  const mediaAction = canLaunch
+    ? `<a class="media-link" href="${game.deployUrl}" target="_blank" rel="noreferrer" aria-label="Play ${game.title}"><img src="${assetUrl(game.thumbnail)}" alt="${game.title} gameplay thumbnail" loading="lazy" /></a>`
+    : `<button class="media-link" type="button" data-play="${game.slug}" aria-label="Explore ${game.title}"><img src="${assetUrl(game.thumbnail)}" alt="${game.title} gameplay thumbnail" loading="lazy" /></button>`;
   const action = `
     <div class="card-actions ${hasGithub ? "" : "single-action"}">
       ${
@@ -37,7 +40,7 @@ function card(game, index) {
   return `
     <article class="game-card ${canLaunch ? "is-live" : "needs-deploy"}" style="--i: ${index}; --accent: ${game.accent}" data-slug="${game.slug}">
       <div class="card-media">
-        <img src="${assetUrl(game.thumbnail)}" alt="${game.title} gameplay thumbnail" loading="lazy" />
+        ${mediaAction}
         <span class="status ${statusClass(game)}">${statusLabel(game)}</span>
       </div>
       <div class="card-body">
@@ -46,10 +49,6 @@ function card(game, index) {
           <span>${game.engine}</span>
         </div>
         <p>${game.description}</p>
-        <div class="meta">
-          <span>${game.repoName}</span>
-          <span>${game.githubAccess === "private" ? "Private GitHub source" : hasGithub ? "GitHub source" : "Source release pending"}</span>
-        </div>
         ${action}
       </div>
     </article>
