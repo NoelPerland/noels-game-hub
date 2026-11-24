@@ -41,7 +41,7 @@ function card(game, index) {
     <article class="game-card ${canLaunch ? "is-live" : "needs-deploy"}" style="--i: ${index}; --accent: ${game.accent}" data-slug="${game.slug}">
       <div class="card-media">
         ${mediaAction}
-        <span class="status ${statusClass(game)}">${statusLabel(game)}</span>
+        ${canLaunch ? "" : `<span class="status ${statusClass(game)}">${statusLabel(game)}</span>`}
       </div>
       <div class="card-body">
         <div class="title-row">

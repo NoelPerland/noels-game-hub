@@ -326,6 +326,8 @@ h1 {
   pointer-events: none;
 }
 
+.game-card.is-live .card-media::after { display: none; }
+
 .status {
   position: absolute;
   z-index: 1;
